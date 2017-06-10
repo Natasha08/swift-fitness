@@ -12,7 +12,7 @@
         <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FitnessApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="FitnessApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -46,8 +46,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="buttonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="4n4-8r-EQx"/>
-                                    <segue destination="nOB-II-hOM" kind="show" identifier="toLoginPage" id="Z1x-HY-Sdt"/>
+                                    <segue destination="nOB-II-hOM" kind="show" id="jjr-cj-eJS"/>
                                 </connections>
                             </button>
                             <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jk2-Nf-z3b">
@@ -70,7 +69,7 @@
         <!--Login Page-->
         <scene sceneID="Qlt-X5-49I">
             <objects>
-                <viewController id="nOB-II-hOM" customClass="SecondViewController" customModule="FitnessApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="nOB-II-hOM" customClass="LoginViewController" customModule="FitnessApp" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="AgA-Sy-zfg"/>
                         <viewControllerLayoutGuide type="bottom" id="boB-Qx-Bow"/>
@@ -114,13 +113,16 @@
                                     <navigationItem title="Title" id="eqY-hF-hai"/>
                                 </items>
                             </navigationBar>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V59-vs-2O0">
-                                <rect key="frame" x="160" y="256" width="55" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Ts-5W-mwF">
+                                <rect key="frame" x="145" y="268" width="85" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <state key="normal" title="Submit">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginAction:" destination="nOB-II-hOM" eventType="touchUpInside" id="tyn-ab-Ew2"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -128,6 +130,10 @@
                     <navigationItem key="navigationItem" title="Login Page" id="SO8-R2-xYb">
                         <barButtonItem key="backBarButtonItem" title="Go To Home" id="3JG-dx-Mgk"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailTextField" destination="KA9-fd-dsK" id="cYI-5a-2KZ"/>
+                        <outlet property="passwordTextField" destination="pKr-XF-se5" id="dRJ-TW-cQ6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mdT-jE-2Vs" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

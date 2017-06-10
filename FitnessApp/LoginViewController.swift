@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  LoginViewController.swift
 //  FitnessApp
 //
 //  Created by Natasha Osborne on 6/9/17.
@@ -8,19 +8,28 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class LoginViewController: UIViewController {
+    let userController = UserController()
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func loginAction(_ sender: Any) {
+        let email = emailTextField.text ?? ""
+        let password = passwordTextField.text ?? ""
+        let newUser = User.init(email: email, password: password)
+        userController.loginUser(username: email, password: password)
+        print("BUTTON PRESSED")
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
+
 
     /*
     // MARK: - Navigation

@@ -21,16 +21,17 @@ class FitnessAppTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    //MARK: User Class Tests
+    func testUserInitializationSucceeds() {
+        let newUser = User.init(email: "testuser@example.com", password: "password")
+        XCTAssertNotNil(newUser)
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testUserInitializationFails() {
+        let emptyEmailUser = User.init(email: "", password: "password")
+        XCTAssertNil(emptyEmailUser)
+        
+        let emptyPasswordUser = User.init(email: "testuser@example.com", password: "")
+        XCTAssertNil(emptyPasswordUser)
     }
-    
 }

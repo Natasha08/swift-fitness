@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3408C83E1EEC66A200EBA488 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3408C83D1EEC66A200EBA488 /* UserController.swift */; };
 		34664A271EEB3B5800871BCC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34664A261EEB3B5800871BCC /* AppDelegate.swift */; };
 		34664A291EEB3B5800871BCC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34664A281EEB3B5800871BCC /* ViewController.swift */; };
 		34664A2C1EEB3B5800871BCC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34664A2A1EEB3B5800871BCC /* Main.storyboard */; };
@@ -14,7 +15,9 @@
 		34664A311EEB3B5800871BCC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34664A2F1EEB3B5800871BCC /* LaunchScreen.storyboard */; };
 		34664A3C1EEB3B5800871BCC /* FitnessAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34664A3B1EEB3B5800871BCC /* FitnessAppTests.swift */; };
 		34664A471EEB3B5800871BCC /* FitnessAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34664A461EEB3B5800871BCC /* FitnessAppUITests.swift */; };
-		34F0012E1EEB57CC00622BFF /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F0012D1EEB57CC00622BFF /* SecondViewController.swift */; };
+		34F0012E1EEB57CC00622BFF /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34F0012D1EEB57CC00622BFF /* LoginViewController.swift */; };
+		34FBB1381EEC45810056F069 /* nutrition.png in Resources */ = {isa = PBXBuildFile; fileRef = 34FBB1371EEC45810056F069 /* nutrition.png */; };
+		34FBB13A1EEC4CD50056F069 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34FBB1391EEC4CD50056F069 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3408C83D1EEC66A200EBA488 /* UserController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		34664A231EEB3B5800871BCC /* FitnessApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitnessApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		34664A261EEB3B5800871BCC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34664A281EEB3B5800871BCC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -48,7 +52,9 @@
 		34664A421EEB3B5800871BCC /* FitnessAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FitnessAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		34664A461EEB3B5800871BCC /* FitnessAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FitnessAppUITests.swift; sourceTree = "<group>"; };
 		34664A481EEB3B5800871BCC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		34F0012D1EEB57CC00622BFF /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		34F0012D1EEB57CC00622BFF /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		34FBB1371EEC45810056F069 /* nutrition.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = nutrition.png; path = ../../../Downloads/nutrition.png; sourceTree = "<group>"; };
+		34FBB1391EEC4CD50056F069 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,11 +106,15 @@
 			isa = PBXGroup;
 			children = (
 				34664A261EEB3B5800871BCC /* AppDelegate.swift */,
-				34664A281EEB3B5800871BCC /* ViewController.swift */,
 				34664A2A1EEB3B5800871BCC /* Main.storyboard */,
-				34F0012D1EEB57CC00622BFF /* SecondViewController.swift */,
+				34F0012F1EEC14AD00622BFF /* View Controllers */,
+				34F001321EEC153400622BFF /* Views */,
+				34F001301EEC150B00622BFF /* Models */,
+				34F001311EEC151600622BFF /* Model Controllers */,
+				34FBB13B1EEC5B800056F069 /* Other Controllers */,
 				34664A2D1EEB3B5800871BCC /* Assets.xcassets */,
 				34664A2F1EEB3B5800871BCC /* LaunchScreen.storyboard */,
+				34FBB1371EEC45810056F069 /* nutrition.png */,
 				34664A321EEB3B5800871BCC /* Info.plist */,
 			);
 			path = FitnessApp;
@@ -126,6 +136,45 @@
 				34664A481EEB3B5800871BCC /* Info.plist */,
 			);
 			path = FitnessAppUITests;
+			sourceTree = "<group>";
+		};
+		34F0012F1EEC14AD00622BFF /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				34F0012D1EEB57CC00622BFF /* LoginViewController.swift */,
+				34664A281EEB3B5800871BCC /* ViewController.swift */,
+			);
+			name = "View Controllers";
+			sourceTree = "<group>";
+		};
+		34F001301EEC150B00622BFF /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				34FBB1391EEC4CD50056F069 /* User.swift */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
+		34F001311EEC151600622BFF /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				3408C83D1EEC66A200EBA488 /* UserController.swift */,
+			);
+			name = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		34F001321EEC153400622BFF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		34FBB13B1EEC5B800056F069 /* Other Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Other Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				34FBB1381EEC45810056F069 /* nutrition.png in Resources */,
 				34664A311EEB3B5800871BCC /* LaunchScreen.storyboard in Resources */,
 				34664A2E1EEB3B5800871BCC /* Assets.xcassets in Resources */,
 				34664A2C1EEB3B5800871BCC /* Main.storyboard in Resources */,
@@ -265,7 +315,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				34F0012E1EEB57CC00622BFF /* SecondViewController.swift in Sources */,
+				34FBB13A1EEC4CD50056F069 /* User.swift in Sources */,
+				34F0012E1EEB57CC00622BFF /* LoginViewController.swift in Sources */,
+				3408C83E1EEC66A200EBA488 /* UserController.swift in Sources */,
 				34664A291EEB3B5800871BCC /* ViewController.swift in Sources */,
 				34664A271EEB3B5800871BCC /* AppDelegate.swift in Sources */,
 			);
