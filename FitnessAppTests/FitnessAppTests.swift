@@ -23,15 +23,22 @@ class FitnessAppTests: XCTestCase {
     
     //MARK: User Class Tests
     func testUserInitializationSucceeds() {
-        let newUser = User.init(email: "testuser@example.com", password: "password")
+        let newUser = User.init(email: "testuser@example.com", password: "password", token: "fakeToken")
+        let authorized = newUser?.authorized()
         XCTAssertNotNil(newUser)
+        XCTAssertEqual(authorized, true)
     }
     
     func testUserInitializationFails() {
-        let emptyEmailUser = User.init(email: "", password: "password")
+        let emptyEmailUser = User.init(email: "", password: "password", token: "")
         XCTAssertNil(emptyEmailUser)
         
-        let emptyPasswordUser = User.init(email: "testuser@example.com", password: "")
+        let emptyPasswordUser = User.init(email: "testuser@example.com", password: "", token: "")
         XCTAssertNil(emptyPasswordUser)
+        
+        let emptyTokenUser = User.init(email: "testuser@example.com", password: "password", token: "unauthorized")
+        let authorized = emptyTokenUser?.authorized()
+        XCTAssertNotNil(emptyTokenUser)
+        XCTAssertEqual(authorized, false)
     }
 }

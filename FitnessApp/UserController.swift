@@ -17,7 +17,7 @@ public class UserController {
         request.setValue("application/json", forHTTPHeaderField:
         "Content-Type")
         
-        let data: [String: Any] = ["username": username]
+        let data: [String: Any] = ["username": username, "password": password]
         
         let jsonData = try? JSONSerialization.data(withJSONObject:
             data, options: [])
@@ -25,7 +25,15 @@ public class UserController {
         
         let task = URLSession.shared.dataTask(with: request)
         { (data, response, error) in
-            print(data, response, error)
+
+            let json = try? JSONSerialization.jsonObject(with: data!, options: [])
+            if let dictionary = json as? [String: Any] {
+                if let token = dictionary["token"] as? String {
+                    User.init(email: username, password: password, token: token)
+                }
+
+            }
+            User.init(email: username, password: password, token: "unauthorized")
         }
         task.resume()
     }

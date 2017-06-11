@@ -21,9 +21,8 @@ class LoginViewController: UIViewController {
     @IBAction func loginAction(_ sender: Any) {
         let email = emailTextField.text ?? ""
         let password = passwordTextField.text ?? ""
-        let newUser = User.init(email: email, password: password)
+ 
         userController.loginUser(username: email, password: password)
-        print("BUTTON PRESSED")
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

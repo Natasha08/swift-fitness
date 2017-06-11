@@ -10,7 +10,7 @@ import UIKit
 
 public struct User {
     
-    public init?(email: String, password: String) {
+    public init?(email: String, password: String, token: String) {
         
         guard !password.isEmpty else {
             return nil
@@ -22,9 +22,18 @@ public struct User {
         
         self.email = email
         self.password = password
+        self.token = token
     }
 
     let email: String
     let password: String
+    let token: String
+    
+    func authorized() -> Bool {
+        if token == "unauthorized" {
+            return false
+        }
+        return true
+    }
     
 }
